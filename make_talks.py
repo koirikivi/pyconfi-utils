@@ -43,13 +43,13 @@ Talk = namedtuple("Talk", "email title slug outline about_author")
 
 
 def main(speakers_csv, cfp_csv):
-    accepted_speakers = parse_accepted_speacers(speakers_csv)
+    accepted_speakers = parse_accepted_speakers(speakers_csv)
     proposed_talks = parse_talks(cfp_csv)
     talks_and_speakers = group_talks_and_speakers(accepted_speakers, proposed_talks)
     print render_html(talks_and_speakers).encode("utf-8")
 
 
-def parse_accepted_speacers(speakers_csv):
+def parse_accepted_speakers(speakers_csv):
     with open(speakers_csv) as f:
         reader = csv.reader(f)
         field_names = reader.next()
