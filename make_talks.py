@@ -1,5 +1,14 @@
 #!/usr/bin/env python
 # coding: utf-8
+"""
+Generate fi.pycon.org talks page (_talks.html)
+
+Usage: python make_talks.py 2015_communications_tracking.csv \
+     2015_call_for_proposals.csv  > ../fi.pycon.org/2015/_talks.html
+
+Download CSV files from google docs. The generated html will require some
+hand-editing.
+"""
 from __future__ import unicode_literals
 from collections import namedtuple
 import csv
